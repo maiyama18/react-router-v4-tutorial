@@ -67,7 +67,7 @@ class Friends extends Component {
 const FriendList = props => (
   <div>
     {FRIENDS.map(friend => (
-      <li>
+      <li key={friend.id}>
         <Link to={`/friends/${friend.id}`}>{friend.nameJa}</Link>
         <button onClick={() => props.handleVote(friend.id)}>+</button>
       </li>
